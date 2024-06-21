@@ -1,6 +1,7 @@
 import LoginForm from "@/components/auth/login-form";
+import Login from "../register/page";
 
-const Login = async () => {
+const LoginPage = async () => {
 	return (
 		<div className="flex flex-col w-full min-h-screen items-center justify-center">
 			<LoginForm />
@@ -8,4 +9,4 @@ const Login = async () => {
 	);
 };
 
-export default Login;
+export default LoginPage;

@@ -1,6 +1,6 @@
 import RegisterForm from "@/components/auth/register-form";
 
-const Login = async () => {
+const RegisterPage = async () => {
 	return (
 		<div className="flex flex-col w-full min-h-screen items-center justify-center">
 			<RegisterForm />
@@ -8,4 +8,4 @@ const Login = async () => {
 	);
 };
 
-export default Login;
+export default RegisterPage;

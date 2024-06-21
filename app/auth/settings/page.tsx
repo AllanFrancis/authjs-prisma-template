@@ -17,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-export default async function Settings() {
+export default async function SettingsPage() {
 	const session = await auth();
 	return (
 		<div className="flex min-h-screen w-full flex-col">

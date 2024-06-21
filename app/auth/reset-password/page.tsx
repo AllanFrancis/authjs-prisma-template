@@ -1,6 +1,6 @@
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
-const page = () => {
+const ResetPage = () => {
 	return (
 		<div className="flex flex-col w-full min-h-screen items-center justify-center">
 			<ResetPasswordForm />
@@ -8,4 +8,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default ResetPage;

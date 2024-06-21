@@ -1,7 +1,7 @@
 import EmailVerificationForm from "@/components/auth/email-verification-form";
 import { Suspense } from "react";
 
-const VerifyEmail = () => {
+const VerifyEmailPage = () => {
 	return (
 		<div className="flex flex-col w-full min-h-screen items-center justify-center">
 			<Suspense>
@@ -11,4 +11,4 @@ const VerifyEmail = () => {
 	);
 };
 
-export default VerifyEmail;
+export default VerifyEmailPage;

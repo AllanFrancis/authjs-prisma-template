@@ -116,7 +116,7 @@ export default function LoginForm() {
 										<FormItem>
 											<FormLabel>Senha</FormLabel>
 											<FormControl>
-												<div>
+												<div className="space-y-4">
 													<Input type="password" placeholder="******" required {...field} disabled={isPending} />
 													<div className="flex items-center">
 														<Link
