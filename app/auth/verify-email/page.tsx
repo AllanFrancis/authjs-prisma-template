@@ -4,7 +4,7 @@ import { Suspense } from "react";
 const VerifyEmailPage = () => {
 	return (
 		<div className="flex flex-col w-full min-h-screen items-center justify-center">
-			<Suspense>
+			<Suspense fallback={<div> Loading... </div>}>
 				<EmailVerificationForm />
 			</Suspense>
 		</div>

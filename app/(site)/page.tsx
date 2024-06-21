@@ -7,7 +7,7 @@ export default function Home() {
 				<Navbar />
 			</header>
 			<main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-				<div className="absolute z-0 inset-0 h-full w-full flex items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#086_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#086_100%)]">
+				<div className="absolute z-0 inset-0 h-full w-full flex items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#3b82f6_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#3b82f6_100%)]">
 					<div className="z-auto container contain-content flex flex-col justify-center">
 						<div className="flex flex-col items-center">
 							<span className="text-7xl mb-8">🧑‍🚀🚀</span>
