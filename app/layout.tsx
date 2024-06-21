@@ -21,7 +21,7 @@ export default async function RootLayout({
 	const session = await auth();
 	return (
 		<html lang="pt-BR">
-			<body className={inter.className} suppressHydrationWarning>
+			<body className={`${inter.className} min-h-screen`} suppressHydrationWarning>
 				<SessionProvider session={session}>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
 						{children}
