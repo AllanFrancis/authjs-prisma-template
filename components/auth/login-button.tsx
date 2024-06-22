@@ -4,19 +4,19 @@ import { signIn } from "next-auth/react";
 import type { ReactNode } from "react";
 
 type Props = {
-	children?: ReactNode;
+  children?: ReactNode;
 };
 
 const LoginButton = ({ children }: Props) => {
-	return (
-		<div
-			onClick={async () => {
-				signIn();
-			}}
-		>
-			{children}
-		</div>
-	);
+  return (
+    <div
+      onClick={async () => {
+        signIn();
+      }}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default LoginButton;
