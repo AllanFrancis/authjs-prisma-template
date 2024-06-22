@@ -22,6 +22,7 @@ type Props = {
 };
 
 const LoginBadge = ({ user }: Props) => {
+	console.log(user?.image);
 	return (
 		<>
 			{user && (
@@ -38,7 +39,7 @@ const LoginBadge = ({ user }: Props) => {
 						<DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<Link href="/auth/settings" className="flex flex-1 justify-start items-center">
+							<Link href="/settings" className="flex flex-1 justify-start items-center">
 								<LineMdCogLoop className="mr-2" />
 								Perfil
 							</Link>

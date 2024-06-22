@@ -7,9 +7,10 @@ export const configRoutes: ConfigRoutes = {
 		"/auth/register",
 		"/auth/change-password",
 		"/auth/reset-password",
-		"/auth/verify-email",
+		"/auth/verify-email"
 	],
 	authRoutes: ["/api/auth/signin"],
 	apiRoutes: ["/api/protected-api"],
-	protectedRoutes: ["/auth/settings"],
+	protectedRoutes: ["/settings",
+		"/dashboard",],
 };

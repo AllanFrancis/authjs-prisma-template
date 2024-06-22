@@ -9,7 +9,6 @@ type Props = {
 
 const LoginButton = ({ children }: Props) => {
 	return (
-		// biome-ignore lint: reason
 		<div
 			onClick={async () => {
 				signIn();
