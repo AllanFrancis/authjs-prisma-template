@@ -2,8 +2,8 @@
 
 import { prisma } from "@/app/_lib/db";
 import mail from "@/app/_lib/mail";
-import { findUserbyEmail } from "@/app/services";
-import { findVerificationTokenbyToken } from "@/app/services/auth";
+import { findUserbyEmail } from "@/services";
+import { findVerificationTokenbyToken } from "@/services/auth";
 import type { User } from "@prisma/client";
 /**
  * This method uses Resend to send an email to the user to verify

@@ -5,7 +5,7 @@ import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 import { InvalidCredentials, UserNotFound } from "./app/_lib/auth";
 import { CredentialsSchema } from "./schemas/auth";
-import { findUserbyEmail } from "./app/services";
+import { findUserbyEmail } from "./services";
 
 export default {
   providers: [

@@ -2,8 +2,8 @@
 
 import { prisma } from "@/app/_lib/db";
 import mail from "@/app/_lib/mail";
-import { findUserbyEmail } from "@/app/services";
-import { findTwoFactorAuthTokeByToken } from "@/app/services/auth";
+import { findUserbyEmail } from "@/services";
+import { findTwoFactorAuthTokeByToken } from "@/services/auth";
 import type { User } from "@prisma/client";
 
 /**

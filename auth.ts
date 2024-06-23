@@ -3,8 +3,8 @@ import { UserRole } from "@prisma/client";
 import NextAuth from "next-auth";
 import authConfig from "./auth.config";
 import { prisma } from "./app/_lib/db";
-import { findUserbyEmail } from "./app/services";
-import { isTwoFactorAutenticationEnabled } from "./app/services/auth";
+import { findUserbyEmail } from "./services";
+import { isTwoFactorAutenticationEnabled } from "./services/auth";
 export const {
   handlers: { GET, POST },
   auth,

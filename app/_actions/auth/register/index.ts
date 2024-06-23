@@ -2,7 +2,7 @@
 
 import { prisma } from "@/app/_lib/db";
 import { RegisterSchema } from "@/schemas/auth";
-import { createVerificationToken } from "@/app/services/auth";
+import { createVerificationToken } from "@/services/auth";
 import { UserRole } from "@prisma/client";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import bcryptjs from "bcryptjs";
