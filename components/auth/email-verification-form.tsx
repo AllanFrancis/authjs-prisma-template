@@ -33,7 +33,7 @@ const EmailVerificationForm = () => {
     automaticSubmission();
   }, [automaticSubmission]);
   return (
-    <div className="flex flex-1 justify-center items-center">
+    <div className="flex flex-1 items-center justify-center">
       <AuthCard title="Verifique seu E-mail">
         {success && (
           <AuthFormMessage title="Sucesso" type="success" message={success} />

@@ -85,7 +85,7 @@ export const ResetPasswordForm = () => {
 
           <Button variant={"default"} className="w-full" disabled={isPending}>
             <LoaderIcon
-              className={!isPending ? "hidden" : "animate-spin mr-2"}
+              className={!isPending ? "hidden" : "mr-2 animate-spin"}
             />
             <span>Enviar e-mail</span>
           </Button>

@@ -185,7 +185,7 @@ export default function UserSettingsForm({ user }: Props) {
                   control={form.control}
                   name="isTwoFactorAuthEnabled"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 m-2 space-x-2">
+                    <FormItem className="m-2 flex flex-row items-center justify-between space-x-2 rounded-lg border p-4">
                       <ShieldAlert className="text-yellow-400" />
                       <FormLabel className="flex-1 space-y-1">
                         <p className="text-sm font-medium leading-none">
@@ -216,10 +216,10 @@ export default function UserSettingsForm({ user }: Props) {
                   />
                 )}
                 <Separator />
-                <div className="w-full flex justify-end items-center">
+                <div className="flex w-full items-center justify-end">
                   <Button variant={"default"} disabled={isPending}>
                     <LoaderIcon
-                      className={!isPending ? "hidden" : "animate-spin mr-2"}
+                      className={!isPending ? "hidden" : "mr-2 animate-spin"}
                     />
                     <span>Salvar</span>
                   </Button>

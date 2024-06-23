@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 
 const ChangePassword = () => {
   return (
-    <div className="flex flex-col w-full min-h-screen items-center justify-center">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <Suspense>
         <ChangePasswordForm />
       </Suspense>

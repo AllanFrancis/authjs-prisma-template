@@ -2,7 +2,7 @@ import RegisterForm from "@/components/auth/register-form";
 
 const RegisterPage = async () => {
   return (
-    <div className="flex flex-col w-full min-h-screen items-center justify-center">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <RegisterForm />
     </div>
   );

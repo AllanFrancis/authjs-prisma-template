@@ -41,7 +41,7 @@ const LoginBadge = ({ user }: Props) => {
             <DropdownMenuItem>
               <Link
                 href="/settings"
-                className="flex flex-1 justify-start items-center"
+                className="flex flex-1 items-center justify-start"
               >
                 <LineMdCogLoop className="mr-2" />
                 Perfil
@@ -49,7 +49,7 @@ const LoginBadge = ({ user }: Props) => {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <LogoutButton>
-              <DropdownMenuItem className="p-0 m-0">
+              <DropdownMenuItem className="m-0 p-0">
                 <Button
                   variant={"ghost"}
                   className="flex flex-1 justify-around"

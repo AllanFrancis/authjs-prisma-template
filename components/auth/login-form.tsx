@@ -181,7 +181,7 @@ export default function LoginForm() {
                   disabled={isPending}
                 >
                   <LoaderIcon
-                    className={!isPending ? "hidden" : "animate-spin mr-2"}
+                    className={!isPending ? "hidden" : "mr-2 animate-spin"}
                   />
                   <span>Conectar</span>
                 </Button>
@@ -225,7 +225,7 @@ export default function LoginForm() {
                   disabled={isPending}
                 >
                   <LoaderIcon
-                    className={!isPending ? "hidden" : "animate-spin mr-2"}
+                    className={!isPending ? "hidden" : "mr-2 animate-spin"}
                   />
                   <span>Validar</span>
                 </Button>

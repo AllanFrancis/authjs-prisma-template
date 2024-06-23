@@ -142,7 +142,7 @@ export default function RegisterForm() {
                 disabled={isPending}
               >
                 <LoaderIcon
-                  className={!isPending ? "hidden" : "animate-spin mr-2"}
+                  className={!isPending ? "hidden" : "mr-2 animate-spin"}
                 />
                 <span>Registrar</span>
               </Button>

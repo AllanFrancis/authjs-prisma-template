@@ -5,7 +5,7 @@ import LoginSocialButton from "./login-social-button";
 const SocialLogin = () => {
   const callbackUrl = `${process.env.NEXT_PUBLIC_URL}`;
   return (
-    <div className="flex w-ful justify-center items-center p-2 space-x-2 ">
+    <div className="w-ful flex items-center justify-center space-x-2 p-2">
       <LoginSocialButton provider="google" callbackUrl={callbackUrl}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
