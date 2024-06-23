@@ -1,10 +1,10 @@
 "use server";
 
 import { auth, update } from "@/auth";
-import { useCurrentUser } from "@/hooks/use-current-user";
-import { prisma } from "@/lib/db";
+import { useCurrentUser } from "@/app/hooks/use-current-user";
+import { prisma } from "@/app/lib/db";
 import { UserSettingsSchema } from "@/schemas/auth";
-import { findUserbyEmail, findUserbyId } from "@/services";
+import { findUserbyEmail, findUserbyId } from "@/app/services";
 import bcryptjs from "bcryptjs";
 import type { z } from "zod";
 

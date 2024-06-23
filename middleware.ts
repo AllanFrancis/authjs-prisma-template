@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import { NextResponse } from "next/server";
 import authConfig from "./auth.config";
 import { configRoutes } from "./config/routes";
-import { createRouteMatchers } from "./lib/route";
+import { createRouteMatchers } from "./app/lib/route";
 
 const { auth } = NextAuth(authConfig);
 

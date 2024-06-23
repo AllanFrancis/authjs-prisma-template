@@ -1,14 +1,14 @@
 "use server";
 
-import mail from "@/lib/mail";
+import mail from "@/app/lib/mail";
 import { NewPasswordSchema, ResetPasswordSchema } from "@/schemas/auth";
-import { findUserbyEmail } from "@/services";
+import { findUserbyEmail } from "@/app/services";
 import {
   createResetPasswordToken,
   deleteResetPasswordToken,
   findResetPasswordTokenByToken,
   updatePassword,
-} from "@/services/auth";
+} from "@/app/services/auth";
 import bcryptjs from "bcryptjs";
 import type { z } from "zod";
 

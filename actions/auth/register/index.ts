@@ -1,8 +1,8 @@
 "use server";
 
-import { prisma } from "@/lib/db";
+import { prisma } from "@/app/lib/db";
 import { RegisterSchema } from "@/schemas/auth";
-import { createVerificationToken } from "@/services/auth";
+import { createVerificationToken } from "@/app/services/auth";
 import { UserRole } from "@prisma/client";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import bcryptjs from "bcryptjs";

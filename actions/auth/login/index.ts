@@ -2,13 +2,13 @@
 
 import { signIn } from "@/auth";
 import { CredentialsSchema, MagicLinkSignInSchema } from "@/schemas/auth";
-import { findUserbyEmail } from "@/services";
+import { findUserbyEmail } from "@/app/services";
 import {
   createTwoFactorAuthToken,
   createVerificationToken,
   deleteTwoFactorAuthTokenById,
   findTwoFactorAuthTokenByEmail,
-} from "@/services/auth";
+} from "@/app/services/auth";
 import { AuthError, CredentialsSignin } from "next-auth";
 import type { z } from "zod";
 import { sendAccountVerificationEmail } from "../email-verification";
