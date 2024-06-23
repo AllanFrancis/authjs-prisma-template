@@ -1,4 +1,4 @@
-import { prisma } from "@/app/lib/db";
+import { prisma } from "@/app/_lib/db";
 import { v4 as uuid } from "uuid";
 
 export const findVerificationTokenbyEmail = async (email: string) => {

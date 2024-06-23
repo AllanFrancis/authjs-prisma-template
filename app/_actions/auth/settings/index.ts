@@ -2,7 +2,7 @@
 
 import { auth, update } from "@/auth";
 import { useCurrentUser } from "@/app/hooks/use-current-user";
-import { prisma } from "@/app/lib/db";
+import { prisma } from "@/app/_lib/db";
 import { UserSettingsSchema } from "@/schemas/auth";
 import { findUserbyEmail, findUserbyId } from "@/app/services";
 import bcryptjs from "bcryptjs";
@@ -17,6 +17,7 @@ export const changeSettings = async (
   settings: z.infer<typeof UserSettingsSchema>,
 ) => {
   const validData = UserSettingsSchema.safeParse(settings);
+
   if (!validData.success) {
     return {
       error: "Dados inválidos",
@@ -31,6 +32,7 @@ export const changeSettings = async (
   }
 
   const userData = await findUserbyId(session?.user.id);
+  console.log(userData);
   if (!userData) {
     return {
       error: "Usuário não encontrado",
@@ -53,6 +55,7 @@ export const changeSettings = async (
   settings.email = undefined;
   // settings.isTwoFactorEnabled = undefined;
   try {
+    console.log(settings);
     const updatedUser = await prisma.user.update({
       data: {
         ...settings,

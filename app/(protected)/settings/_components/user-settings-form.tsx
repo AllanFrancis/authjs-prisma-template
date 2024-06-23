@@ -27,9 +27,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { Switch } from "../ui/switch";
-import AuthFormMessage from "./auth-form-message";
+} from "../../../_components/ui/card";
+import { Switch } from "../../../_components/ui/switch";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
 
 interface Props {
   user?: User;
@@ -98,7 +98,7 @@ export default function UserSettingsForm({ user }: Props) {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>Nome</FormLabel>
                       <FormControl>
                         <Input
                           autoComplete="off"

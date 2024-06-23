@@ -1,6 +1,6 @@
 "use server";
 
-import mail from "@/app/lib/mail";
+import mail from "@/app/_lib/mail";
 import { NewPasswordSchema, ResetPasswordSchema } from "@/schemas/auth";
 import { findUserbyEmail } from "@/app/services";
 import {

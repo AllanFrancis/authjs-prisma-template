@@ -1,5 +1,5 @@
-import { prisma } from "@/app/lib/db";
-import { generateOTP } from "@/app/lib/utils";
+import { prisma } from "@/app/_lib/db";
+import { generateOTP } from "@/app/_lib/utils";
 
 export const findTwoFactorAuthTokenByEmail = async (email: string) => {
   const token = await prisma.twoFactorToken.findUnique({

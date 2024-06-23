@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from "@/app/lib/db";
-import mail from "@/app/lib/mail";
+import { prisma } from "@/app/_lib/db";
+import mail from "@/app/_lib/mail";
 import { findUserbyEmail } from "@/app/services";
 import { findVerificationTokenbyToken } from "@/app/services/auth";
 import type { User } from "@prisma/client";

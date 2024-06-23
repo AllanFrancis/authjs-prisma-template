@@ -1,6 +1,6 @@
 "use server";
 
-import { prisma } from "@/app/lib/db";
+import { prisma } from "@/app/_lib/db";
 import { RegisterSchema } from "@/schemas/auth";
 import { createVerificationToken } from "@/app/services/auth";
 import { UserRole } from "@prisma/client";

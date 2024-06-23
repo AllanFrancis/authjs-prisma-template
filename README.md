@@ -192,11 +192,11 @@ import { ConfigRoutes } from "@/types/routes";
 export const configRoutes: ConfigRoutes = {
   publicRoutes: [
     "/",
-    "/auth/login",
-    "/auth/register",
-    "/auth/change-password",
-    "/auth/reset-password",
-    "/auth/verify-email",
+    "/login",
+    "/register",
+    "/change-password",
+    "/reset-password",
+    "/verify-email",
   ],
   authRoutes: ["/api/auth/signin"],
   apiRoutes: ["/api/protected-api"],

@@ -93,7 +93,7 @@ export const ResetPasswordForm = () => {
       </Form>
       <div className="mt-4 text-center text-sm">
         Gostaria de conectar-se?{" "}
-        <Link href="/auth/login" className="underline">
+        <Link href="/login" className="underline">
           Conectar agora
         </Link>
       </div>

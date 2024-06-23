@@ -152,7 +152,7 @@ export default function RegisterForm() {
 
         <div className="mt-4 text-center text-sm">
           Já tem uma conta?{" "}
-          <Link href="/auth/login" className="underline">
+          <Link href="/login" className="underline">
             Efetue Login
           </Link>
         </div>

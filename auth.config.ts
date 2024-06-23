@@ -3,7 +3,7 @@ import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
-import { InvalidCredentials, UserNotFound } from "./app/lib/auth";
+import { InvalidCredentials, UserNotFound } from "./app/_lib/auth";
 import { CredentialsSchema } from "./schemas/auth";
 import { findUserbyEmail } from "./app/services";
 

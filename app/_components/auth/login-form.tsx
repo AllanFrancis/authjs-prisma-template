@@ -143,7 +143,7 @@ export default function LoginForm() {
                           />
                           <div className="flex items-center">
                             <Link
-                              href="/auth/reset-password"
+                              href="/reset-password"
                               className="ml-auto inline-block text-sm text-secondary-foreground underline"
                             >
                               Esqueceu a senha?
@@ -240,7 +240,7 @@ export default function LoginForm() {
         {!showOTPForm && (
           <div className="mt-4 text-center text-sm">
             Não tem uma conta?{" "}
-            <Link href="/auth/register" className="underline">
+            <Link href="/register" className="underline">
               Cadastre-se
             </Link>
           </div>
@@ -248,7 +248,7 @@ export default function LoginForm() {
         {showOTPForm && (
           <div className="mt-4 text-center text-sm">
             Conectar agora?{" "}
-            <Link href="/auth/login" className="underline">
+            <Link href="/login" className="underline">
               Conectar
             </Link>
           </div>
