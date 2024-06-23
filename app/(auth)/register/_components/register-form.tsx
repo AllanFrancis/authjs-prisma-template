@@ -21,8 +21,8 @@ import {
   FormMessage,
 } from "@/app/_components/ui/form";
 import { RegisterSchema } from "@/schemas/auth";
-import AuthCard from "./auth-card";
-import AuthFormMessage from "./auth-form-message";
+import AuthCard from "../../../_components/auth/auth-card";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
 
 export default function RegisterForm() {
   const router = useRouter();

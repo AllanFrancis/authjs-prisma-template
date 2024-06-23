@@ -1,4 +1,4 @@
-import RegisterForm from "@/app/_components/auth/register-form";
+import RegisterForm from "./_components/register-form";
 
 const RegisterPage = async () => {
   return (

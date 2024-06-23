@@ -5,7 +5,7 @@ import { useState, useTransition } from "react";
 
 import { Button } from "@/app/_components/ui/button";
 import { Input } from "@/app/_components/ui/input";
-import AuthCard from "./auth-card";
+import AuthCard from "../../../_components/auth/auth-card";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -30,9 +30,9 @@ import {
 import { CredentialsSchema } from "@/schemas/auth";
 import { LoaderIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { Separator } from "../ui/separator";
-import AuthFormMessage from "./auth-form-message";
-import SocialLogin from "./social-login";
+import { Separator } from "../../../_components/ui/separator";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
+import SocialLogin from "../../../_components/auth/social-login";
 
 export default function LoginForm() {
   const [isPending, startTransition] = useTransition();

@@ -19,8 +19,8 @@ import { Input } from "@/app/_components/ui/input";
 import { ResetPasswordSchema } from "@/schemas/auth";
 import { LoaderIcon } from "lucide-react";
 import Link from "next/link";
-import AuthCard from "./auth-card";
-import AuthFormMessage from "./auth-form-message";
+import AuthCard from "../../../_components/auth/auth-card";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
 
 export const ResetPasswordForm = () => {
   const [error, setError] = useState<string | undefined>("");

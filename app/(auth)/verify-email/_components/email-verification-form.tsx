@@ -2,8 +2,8 @@
 import { verifyToken } from "@/app/_actions/auth";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback, useEffect, useState } from "react";
-import AuthCard from "./auth-card";
-import AuthFormMessage from "./auth-form-message";
+import AuthCard from "../../../_components/auth/auth-card";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
 
 const EmailVerificationForm = () => {
   const [error, setError] = useState<string | undefined>(undefined);

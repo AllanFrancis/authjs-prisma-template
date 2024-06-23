@@ -20,8 +20,8 @@ import { NewPasswordSchema } from "@/schemas/auth";
 import { LoaderIcon } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import AuthCard from "./auth-card";
-import AuthFormMessage from "./auth-form-message";
+import AuthCard from "../../../_components/auth/auth-card";
+import AuthFormMessage from "../../../_components/auth/auth-form-message";
 
 export const ChangePasswordForm = () => {
   const [error, setError] = useState<string | undefined>("");
