@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/app/_components/ui/card";
 
 interface AuthCardProps {
   title?: string;

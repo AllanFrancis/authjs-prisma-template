@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/app/_components/ui/button";
+import { Input } from "@/app/_components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderIcon } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
-import { register } from "@/actions/auth";
+import { register } from "@/app/_actions/auth";
 import {
   Form,
   FormControl,
@@ -19,7 +19,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/app/_components/ui/form";
 import { RegisterSchema } from "@/schemas/auth";
 import AuthCard from "./auth-card";
 import AuthFormMessage from "./auth-form-message";

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { auth } from "@/auth";
-import UserSettingsForm from "@/components/auth/user-settings-form";
+import UserSettingsForm from "@/app/_components/auth/user-settings-form";
 
 export default async function SettingsPage() {
   const session = await auth();

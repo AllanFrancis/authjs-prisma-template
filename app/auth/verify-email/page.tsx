@@ -1,4 +1,4 @@
-import EmailVerificationForm from "@/components/auth/email-verification-form";
+import EmailVerificationForm from "@/app/_components/auth/email-verification-form";
 import { Suspense } from "react";
 
 const VerifyEmailPage = () => {

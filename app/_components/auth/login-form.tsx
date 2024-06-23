@@ -3,15 +3,15 @@
 import Link from "next/link";
 import { useState, useTransition } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/app/_components/ui/button";
+import { Input } from "@/app/_components/ui/input";
 import AuthCard from "./auth-card";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
-import { login } from "@/actions/auth";
+import { login } from "@/app/_actions/auth";
 import {
   Form,
   FormControl,
@@ -20,13 +20,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/app/_components/ui/form";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp";
+} from "@/app/_components/ui/input-otp";
 import { CredentialsSchema } from "@/schemas/auth";
 import { LoaderIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";

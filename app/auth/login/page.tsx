@@ -1,5 +1,4 @@
-import LoginForm from "@/components/auth/login-form";
-import Login from "../register/page";
+import LoginForm from "@/app/_components/auth/login-form";
 
 const LoginPage = async () => {
   return (

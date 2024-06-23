@@ -1,5 +1,5 @@
 "use client";
-import { verifyToken } from "@/actions/auth";
+import { verifyToken } from "@/app/_actions/auth";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback, useEffect, useState } from "react";
 import AuthCard from "./auth-card";
