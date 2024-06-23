@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { UserSettingsSchema } from "@/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LoaderIcon, ShieldAlert } from "lucide-react";
+import { LoaderIcon, SaveIcon, ShieldAlert } from "lucide-react";
 import type { User } from "next-auth";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -25,11 +25,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { Separator } from "../ui/separator";
 import { Switch } from "../ui/switch";
 import AuthFormMessage from "./auth-form-message";
 
@@ -185,7 +183,7 @@ export default function UserSettingsForm({ user }: Props) {
                   control={form.control}
                   name="isTwoFactorAuthEnabled"
                   render={({ field }) => (
-                    <FormItem className="m-2 flex flex-row items-center justify-between space-x-2 rounded-lg border p-4">
+                    <FormItem className="flex flex-row items-center justify-between space-x-2 rounded-lg border p-4">
                       <ShieldAlert className="text-yellow-400" />
                       <FormLabel className="flex-1 space-y-1">
                         <p className="text-sm font-medium leading-none">
@@ -215,12 +213,13 @@ export default function UserSettingsForm({ user }: Props) {
                     title="Sucesso"
                   />
                 )}
-                <Separator />
                 <div className="flex w-full items-center justify-end">
                   <Button variant={"default"} disabled={isPending}>
-                    <LoaderIcon
-                      className={!isPending ? "hidden" : "mr-2 animate-spin"}
-                    />
+                    {isPending ? (
+                      <LoaderIcon className="mr-2 animate-spin" />
+                    ) : (
+                      <SaveIcon className="mr-2" />
+                    )}
                     <span>Salvar</span>
                   </Button>
                 </div>
