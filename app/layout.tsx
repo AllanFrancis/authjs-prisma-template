@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { auth } from "@/auth";
 import { ThemeProvider } from "@/app/_components/providers/theme-provider";
 import { cn } from "@/app/_lib/utils";
 import { SessionProvider } from "next-auth/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.className} min-h-screen`}
+        className={`${jakarta.className} min-h-screen`}
         suppressHydrationWarning
       >
         <SessionProvider session={session}>

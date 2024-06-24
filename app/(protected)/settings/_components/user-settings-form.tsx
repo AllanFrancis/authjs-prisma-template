@@ -15,7 +15,7 @@ import { Input } from "@/app/_components/ui/input";
 import { UserSettingsSchema } from "@/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderIcon, SaveIcon, ShieldAlert } from "lucide-react";
-import type { User } from "next-auth";
+
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState, useTransition } from "react";
@@ -27,13 +27,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../../_components/ui/card";
-import { Switch } from "../../../_components/ui/switch";
-import AuthFormMessage from "../../../_components/auth/auth-form-message";
+} from "@/app/_components/ui/card";
+import { Switch } from "@/app/_components/ui/switch";
+import AuthFormMessage from "@/app/_components/auth/auth-form-message";
+import { User } from "@prisma/client";
 
 interface Props {
-  user?: User;
+  user?: User | null;
 }
+
 export default function UserSettingsForm({ user }: Props) {
   const { update } = useSession();
   const [isPending, startTransition] = useTransition();
@@ -81,7 +83,6 @@ export default function UserSettingsForm({ user }: Props) {
       }
     });
   };
-
   return (
     <Card x-chunk="dashboard-04-chunk-1">
       <CardHeader>
@@ -183,7 +184,7 @@ export default function UserSettingsForm({ user }: Props) {
                   control={form.control}
                   name="isTwoFactorAuthEnabled"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-center justify-between space-x-2 rounded-lg border p-4">
+                    <FormItem className="flex flex-row items-center justify-between space-x-2 rounded-lg border p-2">
                       <ShieldAlert className="text-yellow-400" />
                       <FormLabel className="flex-1 space-y-1">
                         <p className="text-sm font-medium leading-none">

@@ -11,14 +11,14 @@ import {
 import { CircleUser, LogOut } from "lucide-react";
 import type { User } from "next-auth";
 import Link from "next/link";
-import { LineMdCogLoop } from "../../_components/icons";
+import { LineMdCogLoop } from "@/app/_components/icons";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "../../_components/ui/avatar";
-import LoginButton from "../../_components/auth/login-button";
-import LogoutButton from "../../_components/auth/logout-button";
+} from "@/app/_components/ui/avatar";
+import LoginButton from "@/app/_components/auth/login-button";
+import LogoutButton from "@/app/_components/auth/logout-button";
 import { Button } from "@/app/_components/ui/button";
 
 type Props = {
