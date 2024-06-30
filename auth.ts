@@ -2,7 +2,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import { UserRole } from "@prisma/client";
 import NextAuth from "next-auth";
 import authConfig from "./auth.config";
-import { prisma } from "./app/_lib/db";
+import { db } from "./app/_lib/prisma";
 import { findUserbyEmail } from "./services";
 import { isTwoFactorAutenticationEnabled } from "./services/auth";
 export const {
@@ -12,7 +12,7 @@ export const {
   signOut,
   unstable_update: update,
 } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(db),
   session: {
     strategy: "jwt",
   },

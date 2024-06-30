@@ -3,12 +3,12 @@ import Link from "next/link";
 import { auth } from "@/auth";
 import UserSettingsForm from "./_components/user-settings-form";
 import { Separator } from "@/app/_components/ui/separator";
-import { prisma } from "@/app/_lib/db";
+import { db } from "@/app/_lib/prisma";
 import { User } from "@prisma/client";
 
 export default async function SettingsPage() {
   const session = await auth();
-  const data: User | null = await prisma.user.findFirst({
+  const data: User | null = await db.user.findFirst({
     where: { id: session?.user.id },
   });
   console.log(data);
