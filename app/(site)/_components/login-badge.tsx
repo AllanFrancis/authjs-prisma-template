@@ -26,7 +26,6 @@ type Props = {
 };
 
 const LoginBadge = ({ user }: Props) => {
-  console.log(user?.image);
   return (
     <>
       {user && (
@@ -42,7 +41,7 @@ const LoginBadge = ({ user }: Props) => {
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <Link
                 href="/settings"
                 className="flex flex-1 items-center justify-start"

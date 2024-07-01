@@ -31,6 +31,11 @@ import {
 import { Switch } from "@/app/_components/ui/switch";
 import AuthFormMessage from "@/app/_components/auth/auth-form-message";
 import { User } from "@prisma/client";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/app/_components/ui/avatar";
 
 interface Props {
   user?: User | null;
@@ -89,8 +94,17 @@ export default function UserSettingsForm({ user }: Props) {
         <CardTitle>Dados do Usuário</CardTitle>
         <CardDescription>Suas informações</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
+      <CardContent className="flex">
+        <div className="flex flex-col items-center px-8">
+          <Avatar className="size-20">
+            <AvatarFallback>{user?.name?.charAt(0)}</AvatarFallback>
+            <AvatarImage src={user?.image || ""} />
+          </Avatar>
+          <Button variant="ghost" className="mt-4">
+            Alterar foto
+          </Button>
+        </div>
+        <div className="flex-1 space-y-4">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="space-y-4">

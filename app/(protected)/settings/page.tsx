@@ -11,7 +11,6 @@ export default async function SettingsPage() {
   const data: User | null = await db.user.findFirst({
     where: { id: session?.user.id },
   });
-  console.log(data);
 
   return (
     <div className="flex min-h-screen w-full flex-col">

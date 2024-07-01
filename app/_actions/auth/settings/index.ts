@@ -31,7 +31,6 @@ export const changeSettings = async (
   }
 
   const userData = await findUserbyId(session?.user.id);
-  console.log(userData);
   if (!userData) {
     return {
       error: "Usuário não encontrado",
@@ -54,7 +53,6 @@ export const changeSettings = async (
   settings.email = undefined;
   // settings.isTwoFactorEnabled = undefined;
   try {
-    console.log(settings);
     const updatedUser = await db.user.update({
       data: {
         ...settings,
