@@ -1,5 +1,4 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { UserRole } from "@prisma/client";
 import NextAuth from "next-auth";
 import authConfig from "./auth.config";
 import { prisma } from "./lib/db";
@@ -22,11 +21,22 @@ export const {
 	callbacks: {
 		async signIn({ user, email, account, profile }) {
 			if (account && (account.provider === "google" || account.provider === "github")) {
-				return true;
-			}
-			if (user.email) {
-				const registeredUser = await findUserByEmail(user?.email);
-				if (!registeredUser?.emailVerified) return false;
+			const registeredUser = await findUserByEmail(user.email?? "");
+                if (registeredUser) {
+                    // Link the new provider to the existing user
+                    await prisma.account.create({
+                        data: {
+                            userId: registeredUser.id,
+                            provider: account.provider,
+                            providerAccountId: account.providerAccountId,
+                            type: account.type,
+                            access_token: account.access_token,
+                            refresh_token: account.refresh_token,
+                            expires_at: account.expires_at,
+                        },
+                    });
+                    return true;
+                }
 			}
 			return true;
 		},
@@ -41,7 +51,7 @@ export const {
 					const isTwoFactorEnabled = await isTwoFactorAuthenticationEnabled(user?.id || "");
 					token.isTwoFactorEnabled = isTwoFactorEnabled;
 				}
-				token.role = UserRole.DEFAULT;
+				token.role = "DEFAULT";
 			}
 			return token;
 		},
